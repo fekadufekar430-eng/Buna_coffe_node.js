@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Espresso",
+        "category": "coffee",
+        "description": "Rich and concentrated Ethiopian espresso.",
+        "price": 3.50,
+        "available": true
+    },
+    {
+        "id": 2,
+        "name": "Cappuccino",
+        "category": "coffee",
+        "description": "Espresso with steamed milk and soft foam.",
+        "price": 4.50,
+        "available": true
+    },
+    {
+        "id": 3,
+        "name": "Café Latte",
+        "category": "coffee",
+        "description": "Smooth espresso blended with steamed milk.",
+        "price": 4.75,
+        "available": true
+    },
+    {
+        "id": 4,
+        "name": "Americano",
+        "category": "coffee",
+        "description": "Espresso combined with hot water.",
+        "price": 3.75,
+        "available": true
+    },
+    {
+        "id": 5,
+        "name": "Ethiopian Tea",
+        "category": "tea",
+        "description": "Traditional Ethiopian-style spiced tea.",
+        "price": 2.50,
+        "available": true
+    },
+    {
+        "id": 6,
+        "name": "Green Tea",
+        "category": "tea",
+        "description": "Light and refreshing green tea.",
+        "price": 2.75,
+        "available": true
+    },
+    {
+        "id": 7,
+        "name": "Chocolate Cake",
+        "category": "dessert",
+        "description": "Rich chocolate cake served fresh.",
+        "price": 5.50,
+        "available": true
+    },
+    {
+        "id": 8,
+        "name": "Butter Croissant",
+        "category": "pastry",
+        "description": "Freshly baked buttery French-style croissant.",
+        "price": 3.25,
+        "available": true
+    }
+]

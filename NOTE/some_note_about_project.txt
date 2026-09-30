@@ -1,0 +1,214 @@
+Final project vision
+
+Our café will eventually have:
+
+Customer side
+Home page
+Menu
+Coffee categories
+Food categories
+Shopping cart
+Reservation
+Contact
+About café
+Order submission
+Backend
+HTTP server
+Routing
+Menu API
+Order API
+Reservation API
+File-based data storage
+Validation
+Error handling
+Events
+Logging
+IDs
+Streams
+System information
+
+
+
+
+Finally project structure
+
+☕ Buna Café — Complete Project
+
+The finished architecture is:
+
+buna-cafe/
+│
+├── public/
+│   ├── index.html
+│   ├── menu.html
+│   ├── about.html
+│   ├── reservation.html
+│   │
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   └── app.js
+│   │
+│   └── images/
+│       └── cafe.svg
+│
+├── src/
+│   ├── server.js
+│   │
+│   ├── routes/
+│   │   └── api.js
+│   │
+│   ├── services/
+│   │   ├── menuService.js
+│   │   ├── orderService.js
+│   │   └── reservationService.js
+│   │
+│   ├── events/
+│   │   └── cafeEvents.js
+│   │
+│   └── utils/
+│       ├── dataStore.js
+│       └── logger.js
+│
+├── data/
+│   ├── menu.json
+│   ├── orders.json
+│   └── reservations.json
+│
+├── logs/
+│
+├── package.json
+└── README.md
+
+
+
+The most important learning sequence
+
+Don't try to memorize the whole project.
+
+Study it in this order:
+
+1. server.js
+      ↓
+2. http
+      ↓
+3. fs
+      ↓
+4. path
+      ↓
+5. URL
+      ↓
+6. API routing
+      ↓
+7. JSON request body
+      ↓
+8. services
+      ↓
+9. EventEmitter
+      ↓
+10. crypto
+      ↓
+11. streams
+      ↓
+12. Buffer
+      ↓
+13. os + process
+      ↓
+14. error handling
+      ↓
+15. architecture
+
+The key progression is:
+
+Node Core Modules
+        ↓
+HTTP
+        ↓
+Backend
+        ↓
+API
+        ↓
+Business Logic
+        ↓
+Data
+        ↓
+Events
+        ↓
+Production-style architecture
+
+One limitation of this completed version: 
+     it uses JSON files instead of a production database and has no authentication/payment system.
+     That is deliberate. Those are the next architectural layers, and 
+     adding them without understanding the current Core Module layer would obscure what Node itself is doing.
+
+
+     part 3 explanation in diagram
+
+
+                 ☕ BUNA CAFÉ
+                         │
+                         ↓
+                    menu.html
+                         │
+                         ↓
+                    fetch()
+                         │
+                         ↓
+                 GET /api/menu
+                         │
+                         ↓
+                 ┌─────────────┐
+                 │   Node.js   │
+                 └──────┬──────┘
+                        ↓
+                      http
+                        ↓
+                       URL
+                        ↓
+                      path
+                        ↓
+                       fs
+                        ↓
+                   menu.json
+                        ↓
+                   JSON.parse
+                        ↓
+                  sendJSON()
+                        ↓
+                    Browser
+                        ↓
+                  renderMenu()
+
+
+
+
+## In web development (especially in HTTP requests and responses), 
+'Headers' and 'Host' are crucial concepts.
+
+                  1. What are Headers?
+
+ * When our browser sends a request to a server or the server sends a response, it transmits additional information (metadata) alongside the main data (body). This extra information is called Headers.
+
+ * Analogy: Just like writing the sender's address, the type of letter, and the destination on the outside of a postal envelope, headers act as a "metadata envelope" that describes the details of the request or message.
+
+# Common Types of Headers:
+
+1. Content-Type: Indicates the format of the data being sent (e.g., application/json or text/plain).
+
+2. Authorization: Carries the user's security authentication token.
+
+3.User-Agent: Specifies which browser the user is utilizing (e.g., Chrome, Firefox, etc.).
+
+2. What is a Host (Host Header)?
+
+* The Host header is one of the specific and most important types of headers mentioned above. It contains the domain name or IP address (along with the port) of the web page or server the user wants to communicate with.
+
+Example: When you type http://localhost:3000 into your browser, the value of the Host header becomes localhost:3000.
+
+* Why is it useful? A single large server (computer) can host many different websites. When the server receives a request, the Host header is crucial for it to identify, "Which website is this request intended for?"
+
+Summary
+Headers: Additional metadata sent along with a request or response (functioning like a postal envelope).
+
+Host: A primary component of the headers that specifies the target server or website address for the request.
